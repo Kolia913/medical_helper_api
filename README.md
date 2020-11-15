@@ -10,7 +10,7 @@
 5. Go to directory with manage.py file
 6. Run "python manage.py runserver"
 
-## Endpoints:
+### Endpoints:
   |'admin/'| - admin routes (login: admin, password: 111111)
   |'api-auth/'| - api
   |'api-auth/login'| - login to API (same as admin data)
