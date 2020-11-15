@@ -33,7 +33,7 @@ class Pill(models.Model):
 	"""Лекарства"""
 	name = models.CharField("Название", max_length=200)
 	image = models.ImageField("Изображение", upload_to="pills/")
-	conflicts = models.ManyToManyField(Conflict, verbose_name="Противопоказания", related_name="pill_conflict")
+	conflicts = models.ManyToManyField(Conflict, verbose_name="Противопоказания", related_name="pill_conflict", null=True)
 	desc = models.TextField("Описание")
 	slug = models.SlugField(max_length=255, unique=True)
 

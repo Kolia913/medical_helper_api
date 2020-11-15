@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Disease, Pill
+from .models import Disease, Pill, Effect, Conflict
 
 
 class DiseaseListSerializer(serializers.ModelSerializer):
@@ -32,4 +32,21 @@ class PillDetailSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model = Pill
+		fields = "__all__"
+
+
+class EffectListSerializer(serializers.ModelSerializer):
+	"""Еффективность препарата"""
+	pill = serializers.SlugRelatedField(slug_field="name", read_only=True)
+	disease = serializers.SlugRelatedField(slug_field="name", read_only=True)
+
+	class Meta:
+		model = Effect
+		fields = "__all__"
+
+
+class ConflictDetailSerializer(serializers.ModelSerializer):
+	"""Список противопоказаний препарата"""
+	class Meta:
+		model = Conflict
 		fields = "__all__"
