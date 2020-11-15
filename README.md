@@ -10,15 +10,16 @@
 5. Go to directory with manage.py file
 6. Run "python manage.py runserver"
 
-### Endpoints:
+### Endpoints(API, admin):
       |'admin/'| - admin routes (login: admin, password: 111111)
       |'api-auth/'| - api
       |'api-auth/login'| - login to API (same as admin data)
   ### Prefix:
     |'api/v1/'| - api prefix
-  ### Diseases:
+  ### Diseases endpoints:
     |'disease/'| - list of diseases
     |'disease/<slug:slug>/'| - disease details :param: slug
+  ### Pills endpoints:
     |'pill/'| - list of pills
     |'pill/<slug:slug>/'| - pill details :param: slug
     
