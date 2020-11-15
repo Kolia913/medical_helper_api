@@ -2,7 +2,7 @@
 ## Start api(Windows):
 1. Add project to empty directory and open it in CMD
 2. run command "python -m venv .venv". Directory should be like:
-"""/project
+"""/project_dir:
       /.venv
       /medical_helper"""
 3. Run your .venv in shell: cd .venv\Scripts -> run activate file from shell
