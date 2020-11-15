@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework.views import APIView 
-from .models import Disease, Pill
-from .serializers import DiseaseListSerializer, DiseaseDetailSerializer, PillListSerializer, PillDetailSerializer
+from .models import Disease, Pill, Effect, Conflict
+from .serializers import DiseaseListSerializer, DiseaseDetailSerializer, PillListSerializer, PillDetailSerializer, EffectListSerializer, ConflictDetailSerializer
 from rest_framework.response import Response
 
 
@@ -35,4 +35,20 @@ class PillDetailView(APIView):
 	def get(self, request, slug):
 		pill = Pill.objects.get(slug=slug)
 		serializer = PillDetailSerializer(pill)
+		return Response(serializer.data)
+
+
+class EffectListView(APIView):
+	"""Вывод препаратов и их еффективности"""
+	def get(self, request, pk):
+		effects = Effect.objects.filter(disease_id=pk)
+		serializer = EffectListSerializer(effects, many=True)
+		return Response(serializer.data)
+
+
+class ConflicDetailView(APIView):
+	"""Вывод противопоказаний препарата"""
+	def get(self, request, pk):
+		conflict = Conflict.objects.get(id=pk)
+		serializer = ConflictDetailSerializer(conflict)
 		return Response(serializer.data)
