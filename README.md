@@ -22,4 +22,6 @@
   ### Pills endpoints:
     |'pill/'| - list of pills
     |'pill/<slug:slug>/'| - pill details :param: slug
+    |'effectivity/<int:pk>/'| - pill efectivity :param: disease_id, :return: list of pills effectivity by desease
+    |'conflict/<int:pk>/'| - conflict detail :param: conflict id
     
