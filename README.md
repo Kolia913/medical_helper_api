@@ -2,9 +2,9 @@
 ## Start api(Windows):
 1. Add project to empty directory and open it in CMD
 2. run command "python -m venv .venv". Directory should be like:
-"""/project_dir:
+### /project_dir:
       /.venv
-      /medical_helper"""
+      /medical_helper
 3. Run your .venv in shell: cd .venv\Scripts -> run activate file from shell
 4. Install Django3, Pillow, DjangoRestFramewrok to your .venv (" (.venv) C://project: pip install django " - example)
 5. Go to directory with manage.py file
