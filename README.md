@@ -11,9 +11,9 @@
 6. Run "python manage.py runserver"
 
 ### Endpoints:
-  |'admin/'| - admin routes (login: admin, password: 111111)
-  |'api-auth/'| - api
-  |'api-auth/login'| - login to API (same as admin data)
+      |'admin/'| - admin routes (login: admin, password: 111111)
+      |'api-auth/'| - api
+      |'api-auth/login'| - login to API (same as admin data)
   ### Prefix:
     |'api/v1/'| - api prefix
   ### Diseases:
